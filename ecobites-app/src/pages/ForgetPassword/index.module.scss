@@ -1,0 +1,117 @@
+@import "../../style/colors";
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    // background-color: $background-color;
+}
+.card{
+    padding: 5px;
+    height: 60vh;
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: $card-background-color;
+}
+.paragraph{
+    text-align: center;
+}
+.cardHeader{
+    font-size: 1.5rem;
+    padding: 10px 0px;
+    font-weight: 700;
+    text-align: center;
+    color: $color;
+}
+.cardBody{
+    font-size: 1rem;
+    color: $color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .textField{
+        padding: 10px;   
+        width: 90%; 
+        position: relative;
+
+        input {
+            height: 50px;
+            width: 100%;
+            padding: 12px 10px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            position: relative;
+            transition: border-color 0.2s ease;
+            &:focus {
+                border-color:$border-color;
+                border-width: 2px;
+                outline: none;
+            }
+    
+            &::placeholder {
+                color: transparent;
+            }
+        }
+
+        label {
+            position: absolute;
+            left: 20px;
+            top: 30%; 
+            background-color: $card-background-color; 
+            padding: 0 5px;
+            font-size: 16px; 
+            color: gray; 
+            transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+            pointer-events: none;
+        }
+
+        input:focus + label,
+        input:not(:placeholder-shown) + label {
+            top: 0px; 
+            font-size: 12px; 
+            color: $border-color; 
+        }
+    }
+}
+
+.btn{
+    display: block;
+    width: 90%;
+    padding:10px 0px;
+    border: none;
+    border-radius: 5px;
+    background-color: $btnbackground-color;
+    color: $btncolor;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 5px;
+}
+.successMsg{
+    font-size: 1rem;
+    text-align: center;
+    // padding: 20px;
+}
+.successMsg p{
+    padding-top: 50px;
+}
+.passmsg{
+    color: red;
+    padding-bottom: -10px;
+}
+@media (max-width: 768px) {
+    .card{
+        padding: 5px;
+        width: 90%;
+        height: 68vh;
+    }
+    .cardHeader{
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,25 @@
+$button_green: #b3e87d;
+$link_active: #de7bd7;
+$button_radius:7px;
+$button_padding:10px 20px;
+$button_white: #ffffff;
+.button_design{
+    background-color:$button_green;
+    border-radius:$button_radius;
+    width: 95%;
+    padding:$button_padding;
+    border: none;
+}
+.link_design{
+    color:$link_active;
+}
+.button_white_design{
+    background-color:$button_white;
+    border-radius:$button_radius;
+    width: 95%;
+    padding:$button_padding;
+    border: 1px solid green;
+}
+
+
+
